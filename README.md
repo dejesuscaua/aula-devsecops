@@ -25,8 +25,14 @@ Os dois rodam em `push` e em `pull_request`, definidos em
 
 ## Aviso
 
-O arquivo `config.js` contém uma chave AWS **falsa**, criada de propósito
-para o Gitleaks encontrar. Ela não dá acesso a nada.
+Este repositório contém código inseguro **de propósito**:
+
+- `config.js` — uma chave AWS **falsa**, para o Gitleaks encontrar.
+  Ela não dá acesso a nada.
+- `app.js` — command injection, `eval` e XSS refletido, para o Semgrep
+  encontrar.
+
+Nada disso deve ser copiado para um projeto real.
 
 Lição do lab: apagar o arquivo **não** resolve — o Git guarda todo o
 histórico. A única solução real para uma credencial vazada é **revogar**.
