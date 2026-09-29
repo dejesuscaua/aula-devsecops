@@ -12,7 +12,7 @@ Colocar dois "guardas" automáticos no pipeline do GitHub Actions:
 | **Gitleaks** | Secret scanning | Varre o histórico do Git atrás de senhas, tokens e chaves |
 | **Semgrep** | SAST | Lê o código-fonte atrás de padrões vulneráveis |
 
-Os dois rodam em `push` e em `pull_request`, definidos em
+Os dois rodam em `push`, `pull_request` e `workflow_dispatch`, definidos em
 [`.github/workflows/security.yml`](.github/workflows/security.yml).
 
 ## Roteiro dos labs
